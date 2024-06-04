@@ -1,0 +1,127 @@
+<!-- Emīlija Radzeviča_er22080_18.01.2023. -->
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tintes Traips</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="content_container">
+        <header>
+            <div class="top_banner">
+                <h1>Tintes Traips</h1>
+                <p>Laika kavēklis tiem, kam sirds vietā ir grāmata!</p>
+            </div>
+            <img src="./img/paint-2235835_1920.png" alt="tintes traips">
+        </header>
+        <nav>
+            <ul>
+                <li class="podcast"><a href="./index.html">Raidieraksts</a>
+                    <ul>
+                        <li><a href="#about">Par "Tintes Traips"</a> </li>
+                        <li><a href="#all_episodes">Epizodes</a></li>
+                        <li><a href="#contact">Saziņa</a></li>
+                    </ul>           
+                <li class="script"><a href="./script.html" style="color:gray">Scenārijs</a>
+                    <!-- <ul>
+                        <li><a href="#general_info">Vispārīgi</a></li>
+                        <li><a href="#draft">Teksta uzmetums</a></li>
+                        <li><a href="#full_script">Gala teksts</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+        </nav>
+        <section class="about" id="about">
+            <img src="./img/note-2527458_1920-4.jpg" alt="">
+            <article>
+                <h2>Par "Tintes Traips"</h2>
+                <p>Šis raidieraksts jeb "podkāsts" ir domāts visiem literatūras nozares, precīzāk, literāro darbu publicēšanas procesu, interesentiem. Katrā epizodē tiks apskatīta kāda tēma, kas ir saistīta ar grāmatu izdevniecību. </p>
+                <p>Pirmā epizode tika publicēta 2020. gada janvārī, kā eksāmena darbs "Radio komunikācijas" kursā Rīgas Stradiņa Universitātē.  Tajā apskatītā tēma par grāmatu cenām bija manī raisījusi daudz pārdomu un mokošu neizpratni, tādēļ izvēlējos pati izpētīt šo jautājumu. Ja ir kāda tēma, kas jūs aizrauj vai interesē, saziņas sadaļā droši veiciet savu idejas ieteikumu.</p>
+                <p>Nākotnē "Tintes Traips" arī iekļaus radošās epizodes, kad tēmas būs saistītas ar radošo rakstniecību vai tiks nolasīti jaunie literārie darbi latviešu valodā.</p>
+                <p>Paldies par atbalstu!</p>
+            </article>
+        </section>
+        <section class="episodes_container" id="episodes_container">
+            <h2>Epizodes</h2>
+            <div class="all_episodes" >
+                <div class="one_episode" onclick="audio()">
+                    <div class="cover" id="cover">
+                        <img src="./img/Tintes Traips.png" alt="Tintes Traips raidieraksta logo">
+                        <audio controls id="audio">
+                            <source src="./audio/tintes traips_process un cenas.mp3" type="audio/mpeg">
+                            Diemžēl nav iespējams atskaņot audio failu</audio>
+                    </div>
+                    <h3>Grāmatas cenas izveide</h3>
+                    <time datetime="2020-01-30">30.01.2020.</time> 
+                </div>
+                <div class="one_episode">
+                    <div class="cover">
+                        <img src="./img/Tintes Traips.png" alt="Tintes Traips raidieraksta logo">
+                        <!-- <audio controls>
+                            <source src="" type="audio/mpeg">
+                            Diemžēl nav iespējams atskaņot audio failu</audio> -->
+                    </div>
+                    <h3>Audiogrāmatas</h3>
+                    <time datetime="2022-06-05">05.06.2022.</time> 
+                </div>
+                <div class="one_episode">
+                    <div class="cover">
+                        <img src="./img/Tintes Traips.png" alt="Tintes Traips raidieraksta logo">
+                        <!-- <audio controls>
+                            <source src="" type="audio/mpeg">
+                            Diemžēl nav iespējams atskaņot audio failu</audio> -->
+                    </div>
+                    <h3>Lasītāju paradumi</h3>
+                    <time datetime=""><em>Drīzumā</em></time> 
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h2>Saziņa</h2>
+            <form action="https://www.w3schools.com/action_page.php" method="post">
+                <div class="name">
+                    <label for="name">Vārds: </label>
+                    <input type="text" name="name" id="name" placeholder="Matilde" required>
+                </div>
+                <div class="surname">
+                    <label for="surname">Uzvārds: </label>
+                    <input type="text" name="surname" id="surname" placeholder="Griķe">
+                </div>       
+                <div class="email">
+                    <label for="email">E-pasts: </label>
+                    <input type="email" id="email" placeholder="nosaukums@epasts.lv" required>
+                </div>
+                <div class="choice">
+                    <select name="rason_for_contact" id="reason_for_contact"onclick="show()" required>
+                        <option value="value_one">Vērtējums</option>
+                        <option value="value_two">Labojums</option>
+                        <option value="value_three">Ideja</option>
+                        <option value="value_four">Scenārijs</option>
+                        <option value="value_five">Cits</option>
+                    </select>
+                </div>
+                <input class="file" id="file" type="file" accept=".pdf, .docx" multiple>
+                <div class="number_container" id="number_container">
+                    <input type="text" id="number" placeholder="Epizodes numurs" oninput="checkNumber()">
+                    <p id="warning"></p>
+                </div>
+                <div class="slider_container" id="slider_container">
+                    <p>Vērtējums: <span id="grade"></span></p>
+                    <input type="range" min="1" max="10" value="1" class="slider" id="range">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Vieta tekstam"></textarea>
+                <input type="submit" value="Sūtīt" class="button">
+            </form>
+            <!-- <button type="submit">Sūtīt</button> -->
+        </section>
+        <footer>
+            <p>Izveidoja <strong>Emīlija Radzeviča</strong></p>
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+.content_container {
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    padding-top: 2%;
+    width: 100%;
+    height: auto;
+}
+.top_banner {
+    display: flex;
+    position: relative;
+    align-items: baseline;
+}
+h1 {
+    font-family: 'Long Cang', cursive;
+    font-size: 6rem;
+    font-weight: 50;
+    padding-left: 2%;
+    padding-right: 2%;
+    white-space: nowrap;
+}
+header p {
+    padding-right: 15%;
+    font-size: 1.4rem;
+    display: block;
+}
+header img {
+    width: 23vw;
+    height: 90vh;
+    position: absolute;
+    right: 0%;
+    top: -5%;
+}
+/* ---------------------------------------------- */
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 1;
+    background-color: black;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    /* background-color: aliceblue; */
+}
+.podcast {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1%;
+    padding-right: 2%;
+}
+.script {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1%;
+    padding-left: 2%;
+}
+.podcast > a, .script > a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.podcast ul, .script ul {
+    justify-content: space-evenly;
+    width: 100%;
+}
+.podcast ul {
+    flex-direction: row-reverse;
+}
+.podcast ul li, .script ul li {
+    white-space: nowrap;
+    list-style-type: none;
+}
+.podcast ul li a:first-child, .script ul li a:first-child {
+    font-size: 1rem;
+    text-decoration: none;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: white;
+
+}
+/* ------------------------------------------- */
+.about {
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 100%;
+}
+.about img {
+    width: 45vw;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.about article {
+    padding: 3% 9% 3% 3%;
+}
+h2 {
+    font-size: 2rem;
+}
+.about p {
+    margin-top: 3%;
+    line-height: 1.5rem;
+}
+/* ------------------------------------------------------------------------ */
+.episodes_container {
+    width: 100%; 
+    padding-top: 2%;
+    padding-bottom: 2%; 
+    background-color: rgb(0, 0, 0);
+    margin-top: 3%;
+}
+.episodes_container h2 {
+    text-align: center;
+    color: white;
+}
+.all_episodes {
+    display: flex;
+    justify-content: space-evenly; 
+    margin-top: 2%;
+}
+.one_episode {
+    width: 290px;
+}
+.cover {
+    position: relative;
+}
+.cover img {
+    width: 100%;
+}
+audio {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    display: none;
+}
+h3 {
+    font-size: 1.6rem;
+    padding-left: 4%;
+    color: white;
+}
+time {
+    font-size: 1.2rem;
+    color: white;
+}
+/* ---------------------------------------------- */
+.contact {
+    margin-top: 2%;
+    margin-bottom: 3%;
+    width: 75%;
+}
+.contact h2 {
+    grid-area: header;
+    text-align: center;
+    padding-bottom: 2%;
+}
+form {
+    display: grid;
+    grid-template-areas: 
+        'name name surname surname text text'
+        'email email reason reason text text'
+        'file file range number text text'
+        'submit submit submit submit submit submit';
+}
+.name {
+    grid-area: name;
+    margin-bottom: 10%;
+}
+.surname {
+    grid-area: surname;
+    margin-bottom: 10%;
+}
+.email {
+    grid-area: email;
+    margin-bottom: 10%;
+}
+.reason_for_contact {
+    grid-area: reason;
+}
+.file {
+    grid-area: file;
+    display: none;
+    margin-bottom: 10%;
+}
+#slider_container {
+    grid-area: range;
+    width: 90%;
+    margin-bottom: 10%;
+}
+textarea {
+    grid-area: text;
+}
+.button {
+    grid-area: submit;
+    width: 20%;
+    font-size: 1.5rem;
+    text-align: center; 
+}
+/* ----------------------------------------------- */
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%
+}
+footer > p {
+    font-size: 0.85rem;
+}
+/* -------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+    .top_banner p {display: none;}
+    header img {display: none}
+    h1 {font-size: 4rem; width: 100%; text-align: center;}
+    .podcast ul li a:first-child, .script ul li a:first-child {display: none}
+    #about {flex-direction: column;}
+    .about img {width: 95%;}
+    .all_episodes {flex-direction: column; align-items: center;}
+    .one_episode {margin-top: 2%; padding-bottom: 2%;}
+    form {display: flex; flex-direction: column}
+    form .choice, .file, .number_container, slider_container {padding-top: 4%; padding-bottom: 4%;} 
+    .button {margin-top: 2%; width: 100%;}
+}
+/* -------------------------------------------------- */
+.general_info {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    text-align: left;
+}
+th {
+    border: black solid 1px;
+    padding: 5%;
+}
+table tr th:first-child {
+    text-align: center;
+}
+table {
+    margin-bottom: 3%;
+}
+.table ol > li {
+    margin: 3% 3% 3% 10%;
+    font-size: 1.2rem;
+}
+.table {
+    padding-right: 5%;
+    border-right: black solid 4px;
+}
+.time {
+    padding-top: 3%;
+    line-height: 2.6rem;
+} 
+.timetable {
+    padding-top: 4%;
+    font-size: 1.5rem;
+}
+.strike {
+    text-decoration: line-through;
+}
+/* --------------------------------------------------- */
+.draft, .full_script {
+    border-top: black solid 4px;
+    margin-top: 2%;
+    padding-left: 12%;
+    line-height: 2rem;
+    padding-right: 12%;
+    margin-bottom: 2%;
+}
+.draft h2, .full_script h2 {
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+.draft h3 {
+    font-size: 1.2rem;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.draft ul {
+    padding-left: 7%;
+    padding-bottom: 1%;
+}
+.draft ul > li {
+    list-style-type:circle ;
+    font-size: 1.1rem;
+    list-style-position: inside;
+}
+.hover:hover {
+    background-color: black;
+    transition: 1s;
+    color: white;
+}
+/* ---------------------------------------------------- */
+.stars {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.full_script p {
+    font-size: 1.1rem;
+}
+.full_script ul {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.full_script ul > li {
+    list-style-position: inside;
+}
+/* ------------------------------------------------ */
+@media screen and (max-width: 1000px) {
+    .general_info {flex-direction: column;}
+    .table, .time {border: none; padding-left: 5%;}
+}
+
+
