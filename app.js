@@ -54,5 +54,12 @@ function audio() {
 document.getElementById("cover").onclick = function () { 
     document.getElementById("audio").style.display = "block";
 }
+function audio2() {
+    document.getElementById("audio2").style.display = "block";
+}
+
+document.getElementById("cover2").onclick = function () { 
+    document.getElementById("audio2").style.display = "block";
+}
  
 
